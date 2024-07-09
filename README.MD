@@ -1,17 +1,20 @@
-To Create:
-
-Make mongodb cluster
-
-/server/config/database.js
-- change everything past @ in mongourl with your cluster url
+To Build:
 
 /server/.env
 - set the below variables (for development mode: MODE = dev)
-PORT
-MODE
-SECRET
-MONGO_USER
-MONGO_PASS
+<<<<<<< HEAD
+PORT=4000
+MODE="dev"
+SECRET=(your secret)
+MONGO_USER=(your mongo username)
+MONGO_PASS=(your mongo password)
+=======
+PORT=4000
+MODE="dev"
+SECRET=(your secret)
+MONGO_USER=(your mongo username)
+MONGO_PASS=(your mongo password)
+>>>>>>> refs/remotes/origin/main
 
 /server/.env.dev
 - set the below variable
