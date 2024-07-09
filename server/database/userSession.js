@@ -36,11 +36,11 @@ module.exports = {
             const containsNumber = /[0-9]/;
             const allRegexChecks = [containsLowercase, containsUppercase, containsNumber];
 
-            if (password.length < 10) return res.json({ message: "Your password needs:\n10 characters\n1 lowercase character\n1 uppercase character\n1 number\n" });
+            if (password.length < 10) return res.json({ message: "Your password needs:\n10 characters\n1 lowercase character\n1 uppercase character\n1 number" });
             
             for (let i = 0; i < allRegexChecks.length; i++) {
                 if (!password.match(allRegexChecks[i])) 
-                    return res.json({ message: "Your password needs:\n10 characters\n1 lowercase character\n1 uppercase character\n1 number\n" });
+                    return res.json({ message: "Your password needs:\n10 characters\n1 lowercase character\n1 uppercase character\n1 number" });
                 
             }
 

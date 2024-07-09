@@ -5,7 +5,7 @@ require('./env.js').createEnvironment();
 const mongoose = require('mongoose');
 const mongoUser = encodeURIComponent(process.env.MONGO_USER);
 const mongoPass = encodeURIComponent(process.env.MONGO_PASS);
-const mongoURL=`mongodb+srv://${mongoUser}:${mongoPass}@`
+const mongoURL=`mongodb+srv://${mongoUser}:${mongoPass}@database.r8dvo1h.mongodb.net/database?retryWrites=true&w=majority&appName=Database`
 
 module.exports = {
   connectDB : function () {

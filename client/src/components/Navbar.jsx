@@ -7,7 +7,7 @@ const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 const CLIENT_URL = import.meta.env.VITE_CLIENT_URL;
 
 const Navbar = () => {
-    const user = currentUser().user;
+    const user = currentUser();
 
     const Logout = () => {
         axios.post(SERVER_URL + "/logout")

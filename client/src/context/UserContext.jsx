@@ -24,7 +24,7 @@ export const UserProvider = ({ children }) => {
 
   
   return loading ? null : (
-    <UserContext.Provider value={{user:user, playerCard:playerCard}}>
+    <UserContext.Provider value={user}>
       {children}
     </UserContext.Provider>
   );

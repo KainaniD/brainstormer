@@ -18,7 +18,7 @@ const AppLayout = () => {
 }
 
 const NotLoggedInProtector = () => {
-  const user = currentUser().user;
+  const user = currentUser();
 
   if (user) {
     return (<>
@@ -33,7 +33,7 @@ const NotLoggedInProtector = () => {
 }
 
 const LoggedInProtector = () => {
-  const user = currentUser().user;
+  const user = currentUser();
 
   if (!user) {
     return (<>

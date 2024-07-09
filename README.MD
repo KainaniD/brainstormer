@@ -10,7 +10,8 @@ Make mongodb cluster
 PORT
 MODE
 SECRET
-MONGO_URL
+MONGO_USER
+MONGO_PASS
 
 /server/.env.dev
 - set the below variable
