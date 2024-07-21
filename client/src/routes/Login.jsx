@@ -50,35 +50,37 @@ const Login = () => {
 
   return (
     loading ? <Loading /> :
-      <div>
-        <h1 className="text-center text-neutral-300 text-5xl">Login</h1>
-        <section className="flex flex-col items-center mt-10">
+      <div className="pt-20">
+        <h1 className="text-center text-5xl font-semibold">Login</h1>
+        <section className="flex flex-col items-center pt-10">
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="flex flex-row gap-5">
-              <label className="w-20 text-neutral-300">Username</label>
+              <label className="w-20 self-center">Username</label>
               <input
                 type="text"
                 value={username}
                 placeholder="Enter Username"
                 autoComplete="off"
                 name="username"
+                className="px-4 py-2 rounded-full"
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
             <div className="flex flex-row gap-5">
-              <label className="w-20 text-neutral-300">Password</label>
+              <label className="w-20 self-center">Password</label>
               <input
                 type="password"
                 value={password}
                 placeholder="Enter Password"
                 name="password"
+                className="px-4 py-2 rounded-full"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div id="ErrorMessage" className={`flex flex-row gap-5 text-red-500 ${errorMessage ? '' : 'hidden'}`}>
               <p>* {errorMessage}</p>
             </div>
-            <button type="submit" className="clickable">
+            <button type="submit" className="clickable w-1/2 self-center">
               Sign In
             </button>
           </form>

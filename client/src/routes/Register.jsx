@@ -60,56 +60,61 @@ const Register = () => {
   }
 
   return (
-    loading ? <Loading /> : <div>
-      <h1 className="text-center text-neutral-300 text-5xl">Register</h1>
-      <section className="flex flex-col items-center mt-10">
+    loading ? <Loading /> : 
+    <div className="pt-20">
+      <h1 className="text-center text-5xl font-semibold">Register</h1>
+      <section className="flex flex-col items-center pt-10">
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="flex flex-row gap-5">
-            <label className="w-20 text-neutral-300">Username</label>
+            <label className="w-20 self-center">Username</label>
             <input
               type="text"
               value={username}
               placeholder="Enter Username"
               autoComplete="off"
               name="username"
+              className="px-4 py-2 rounded-full"
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="flex flex-row gap-5">
-            <label className="w-20 text-neutral-300">Email</label>
+            <label className="w-20 self-center">Email</label>
             <input
               type="text"
               value={email}
               placeholder="Enter Email"
               autoComplete="off"
               name="email"
+              className="px-4 py-2 rounded-full"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="flex flex-row gap-5">
-            <label className="w-20 text-neutral-300">Password</label>
+            <label className="w-20 self-center">Password</label>
             <input
               type="password"
               value={password}
               placeholder="Enter Password"
               name="password"
+              className="px-4 py-2 rounded-full"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="flex flex-row gap-5">
-            <label className="w-20 text-neutral-300">Confirm</label>
+            <label className="w-20 self-center">Confirm</label>
             <input
               type="password"
               value={confirmation}
               placeholder="Confirm Password"
               name="confirmation"
+              className="px-4 py-2 rounded-full"
               onChange={(e) => setConfirmation(e.target.value)}
             />
           </div>
           <div id="ErrorMessage" className={`whitespace-pre-wrap text-red-500 ${errorMessage ? '' : 'hidden'}`}>
           <p>* {errorMessage}</p>
           </div>
-          <button type="submit" className="clickable">
+          <button type="submit" className="clickable w-1/2 self-center">
             Sign Up
           </button>
         </form>
